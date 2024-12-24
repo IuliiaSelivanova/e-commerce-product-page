@@ -1,0 +1,33 @@
+/* Variables */
+:root {
+  --clr-primary: hsl(26, 100%, 55%);
+  --clr-primary-hover: hsl(25, 100%, 94%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-subtitle-price: hsl(219, 9%, 45%);
+  --clr-text: hsl(220, 13%, 13%);
+  --clr-info: hsl(220, 14%, 75%);
+  /* 
+  $fw-400: 400;
+  $fw-700: 700; */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-size: 16px;
+  font-family: "Kumbh Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
