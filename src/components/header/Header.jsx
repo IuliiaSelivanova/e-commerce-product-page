@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import IMAGES from '../../images.js';
+import { IMAGES } from '../../images.js';
 import './header.css';
 import Cart from '../cart/Cart.jsx';
 // import Cart from '../../functional/Cart';

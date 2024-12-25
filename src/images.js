@@ -1,12 +1,4 @@
-const IMAGES = {
-  productThumbnail1: require('./assets/images/image-product-1-thumbnail.jpg'),
-  productThumbnail2: require('./assets/images/image-product-2-thumbnail.jpg'),
-  productThumbnail3: require('./assets/images/image-product-3-thumbnail.jpg'),
-  productThumbnail4: require('./assets/images/image-product-4-thumbnail.jpg'),
-  product1: require('./assets/images/image-product-1.jpg'),
-  product2: require('./assets/images/image-product-2.jpg'),
-  product3: require('./assets/images/image-product-3.jpg'),
-  product4: require('./assets/images/image-product-4.jpg'),
+export const IMAGES = {
   avatar: require('./assets/images/image-avatar.png'),
   iconCart: require('./assets/icons/icon-cart.svg').default,
   iconClose: require('./assets/icons/icon-close.svg').default,
@@ -19,4 +11,16 @@ const IMAGES = {
   logo: require('./assets/icons/logo.svg').default,
 }
 
-export default IMAGES;
+export const rowGallery = [
+  {id: 1, product: `${require("./assets/images/image-product-1-thumbnail.jpg")}`},
+  {id: 2, product: `${require("./assets/images/image-product-2-thumbnail.jpg")}`},
+  {id: 3, product: `${require("./assets/images/image-product-3-thumbnail.jpg")}`},
+  {id: 4, product: `${require("./assets/images/image-product-4-thumbnail.jpg")}`},
+]
+
+export const galleryItem = [
+  {id: 1, product: `${require('./assets/images/image-product-1.jpg')}`,},
+  {id: 2, product: `${require('./assets/images/image-product-2.jpg')}`,},
+  {id: 3, product: `${require('./assets/images/image-product-3.jpg')}`,},
+  {id: 4, product: `${require('./assets/images/image-product-4.jpg')}`,},
+]

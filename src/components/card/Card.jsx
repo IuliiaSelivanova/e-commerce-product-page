@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import IMAGES from '../../images.js';
+import React from 'react';
+import {IMAGES} from '../../images.js';
 import './Card.css';
 import Gallery from '../gallery/Gallery.jsx';
 

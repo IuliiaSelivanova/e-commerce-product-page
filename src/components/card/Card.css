@@ -10,34 +10,6 @@
   flex-direction: column;
   max-width: 500px;
 }
-.rowImages {
-  display: flex;
-  justify-content: space-between;
-}
-.imageItem {
-  max-width: 90px;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-}
-.imageItem:hover,
-:focus {
-  opacity: 0.6;
-}
-.imageItem.active > img {
-  opacity: 0.5;
-  border: 1px solid hsl(26, 100%, 55%);
-}
-.imageItem > img {
-  border-radius: 10px;
-}
-.card__img {
-  max-width: 445px;
-  margin-bottom: 28px;
-  cursor: pointer;
-}
-.card__img > img {
-  border-radius: 14px;
-}
 
 .info {
   max-width: 465px;

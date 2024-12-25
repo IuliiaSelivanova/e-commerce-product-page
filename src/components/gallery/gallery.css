@@ -1,0 +1,17 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.rowImages {
+  display: flex;
+  justify-content: space-between;
+}
+.card__img {
+  max-width: 445px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+.card__img > img {
+  border-radius: 14px;
+}
