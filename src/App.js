@@ -26,7 +26,7 @@ function App() {
         price={price} 
         count={count}
         isAddedToCart={isAddedToCart}
-      /> 
+      />
       <Card 
         value={formatCount} 
         newprice={price} 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {galleryItem, rowGallery} from '../../images';
 import GalleryItem from '../galleryItem/GalleryItem';
 import './gallery.css'
+import GalleryOpen from '../galleryOpen/GalleryOpen';
 
 const Gallery = () => {
   const [activePicture, setActivePicture] = useState(galleryItem[0]);
@@ -13,12 +14,12 @@ const Gallery = () => {
   }
 
   const openGallery = () => {
-    console.log('opened')
+    setIsOpenGallery(!isOpenGallery);
   }
 
   return (
     <div className='gallery'>
-      <div className="card__img" onClick={openGallery}>
+      <div className="gallery__img" onClick={openGallery}>
         <img src={activePicture.product} alt="product" />
       </div>
 
@@ -30,9 +31,11 @@ const Gallery = () => {
             path={image.product} 
             clickHandle={changePicture}
             isActive={activePicture.id === image.id}
+            openGallery={openGallery}
           />
         })}
       </div>
+      {isOpenGallery && <GalleryOpen isOpened={isOpenGallery} openGallery={openGallery} />}
     </div>
   );
 };

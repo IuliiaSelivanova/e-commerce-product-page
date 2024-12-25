@@ -1,0 +1,74 @@
+.galleryOpen {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  gap: 30px;
+  max-width: 600px;
+}
+.overlay {
+  background-color: hsl(220, 13%, 13%);
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.galleryOpen__wrapper {
+  max-width: 550px;
+  position: relative;
+}
+.galleryOpen__img > img {
+  border-radius: 8px;
+}
+
+.arrow {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  aspect-ratio: 1;
+  width: 54px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.arrow > svg path:hover {
+  stroke: hsl(26, 100%, 55%);
+}
+
+.left {
+  top: 236px;
+  left: -28px;
+}
+.right {
+  top: 236px;
+  right: -28px;
+}
+.closeBtn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  cursor: pointer;
+}
+.closeBtn > svg path:hover {
+  fill: hsl(26, 100%, 55%);
+}
+
+.rowImages {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
