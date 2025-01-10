@@ -72,3 +72,23 @@
   justify-content: space-between;
   gap: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .galleryOpen {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .galleryOpen {
+    display: none;
+  }
+  .overlay {
+    display: none;
+  }
+  .rowImages {
+    display: none;
+  }
+}

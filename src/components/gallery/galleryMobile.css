@@ -1,0 +1,32 @@
+.galleryMobile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  height: 300px;
+  min-width: 100%;
+  position: relative;
+}
+.galleryMobile__item {
+  width: 100vw;
+}
+.galleryMobile__arrow {
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  aspect-ratio: 1;
+  width: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.galleryMobile__arrow-left {
+  top: 130px;
+  left: 16px;
+}
+.galleryMobile__arrow-right {
+  top: 130px;
+  right: 16px;
+}

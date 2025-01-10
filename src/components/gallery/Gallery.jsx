@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {galleryItem, rowGallery} from '../../images';
 import GalleryItem from '../galleryItem/GalleryItem';
 import './gallery.css'
 import GalleryOpen from '../galleryOpen/GalleryOpen';
+import GalleryMobile from './GalleryMobile';
 
 const Gallery = () => {
   const [activePicture, setActivePicture] = useState(galleryItem[0]);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
-  
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const changePicture = (id) => {
     let activeImg = galleryItem.find(item => item.id === id);
     setActivePicture(activeImg);
@@ -19,10 +29,12 @@ const Gallery = () => {
 
   return (
     <div className='gallery'>
-      <div className="gallery__img" onClick={openGallery}>
-        <img src={activePicture.product} alt="product" />
-      </div>
-
+      {windowWidth <= 549 
+        ? <GalleryMobile/> 
+        : (<div className="gallery__img" onClick={openGallery}>
+            <img src={activePicture.product} alt="product" />
+          </div>)
+      }
       <div className="rowImages">
         {rowGallery.map((image) => {
           return <GalleryItem 
@@ -35,7 +47,12 @@ const Gallery = () => {
           />
         })}
       </div>
-      {isOpenGallery && <GalleryOpen isOpened={isOpenGallery} openGallery={openGallery} />}
+        {(windowWidth > 768 && isOpenGallery) && <GalleryOpen
+          activePicture={activePicture}
+          isOpened={isOpenGallery} 
+          openGallery={openGallery}
+          />
+        }
     </div>
   );
 };

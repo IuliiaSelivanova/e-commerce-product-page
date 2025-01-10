@@ -11,7 +11,38 @@
   max-width: 445px;
   margin-bottom: 28px;
   cursor: pointer;
+  overflow: hidden;
 }
-.gallery__img > img {
+.gallery__img img {
+  width: 100%;
+  height: 100%;
   border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: row;
+    gap: 30px;
+    max-height: 440px;
+    overflow: hidden;
+  }
+  .gallery__img {
+    margin-bottom: 0;
+  }
+  .rowImages {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    min-width: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .gallery {
+    max-width: 100%;
+  }
+  .rowImages {
+    display: none;
+  }
 }
