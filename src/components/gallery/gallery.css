@@ -6,6 +6,7 @@
 .rowImages {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .gallery__img {
   max-width: 445px;
@@ -34,8 +35,12 @@
   .rowImages {
     flex-direction: column;
     justify-content: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     gap: 20px;
     min-width: 100px;
+    max-height: 440px;
   }
 }
 @media screen and (max-width: 550px) {

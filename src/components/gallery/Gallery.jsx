@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {galleryItem, rowGallery} from '../../images';
 import GalleryItem from '../galleryItem/GalleryItem';
 import './gallery.css'
@@ -9,6 +9,7 @@ const Gallery = () => {
   const [activePicture, setActivePicture] = useState(galleryItem[0]);
   const [isOpenGallery, setIsOpenGallery] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const rowImagesRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -21,6 +22,19 @@ const Gallery = () => {
   const changePicture = (id) => {
     let activeImg = galleryItem.find(item => item.id === id);
     setActivePicture(activeImg);
+
+    // Прокрутка контейнера при клике на первый или последний элемент
+    if (rowImagesRef.current) {
+      const firstImage = galleryItem[0];
+      const lastImage = galleryItem[galleryItem.length - 1];
+
+      if (id === firstImage.id) {
+        rowImagesRef.current.scrollTop -= 50;
+      } else if (id === lastImage.id) {
+        rowImagesRef.current.scrollTop += 50;
+      }
+    }
+
   }
 
   const openGallery = () => {
@@ -35,7 +49,7 @@ const Gallery = () => {
             <img src={activePicture.product} alt="product" />
           </div>)
       }
-      <div className="rowImages">
+      <div className="rowImages" ref={rowImagesRef}>
         {rowGallery.map((image) => {
           return <GalleryItem 
             key={image.id} 

@@ -91,4 +91,7 @@
   .profile {
     width: 25px;
   }
+  .count-badge {
+    top: 20px;
+  }
 }
