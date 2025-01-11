@@ -3,8 +3,8 @@ import'./galleryOpen.css';
 import { galleryItem, rowGallery } from '../../images';
 import GalleryItem from '../galleryItem/GalleryItem';
 
-const GalleryOpen = ({isOpened, openGallery}) => {
-  const [activePicture, setActivePicture] = useState(galleryItem[0]);
+const GalleryOpen = ({isOpened, openGallery, currentPictureId}) => {
+  const [activePicture, setActivePicture] = useState(galleryItem[currentPictureId]);
   
   const changePicture = (id) => {
     let activeImg = galleryItem.find(item => item.id === id);

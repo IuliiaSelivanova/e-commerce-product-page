@@ -48,7 +48,7 @@ const Gallery = () => {
         })}
       </div>
         {(windowWidth > 768 && isOpenGallery) && <GalleryOpen
-          activePicture={activePicture}
+          currentPictureId={galleryItem.findIndex(item => item.id === activePicture.id)}
           isOpened={isOpenGallery} 
           openGallery={openGallery}
           />

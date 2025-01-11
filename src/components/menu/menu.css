@@ -22,8 +22,7 @@
   cursor: pointer;
 }
 
-.navList__item:hover,
-:focus {
+.navList__item:hover {
   border-bottom: 4px solid hsl(26, 100%, 55%);
 }
 
@@ -31,6 +30,9 @@
   display: none;
   background: none;
   border: none;
+}
+.closeMenuBtn {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,6 +77,7 @@
     font-weight: 700;
   }
   .closeMenuBtn {
+    display: block;
     width: 16px;
     cursor: pointer;
     background: none;
