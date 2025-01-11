@@ -1,33 +1,50 @@
-/* Variables */
-:root {
-  --clr-primary: hsl(26, 100%, 55%);
-  --clr-primary-hover: hsl(25, 100%, 94%);
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-subtitle-price: hsl(219, 9%, 45%);
-  --clr-text: hsl(220, 13%, 13%);
-  --clr-info: hsl(220, 14%, 75%);
-  /* 
-  $fw-400: 400;
-  $fw-700: 700; */
-}
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
-  width: 100vw;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 100%);
   font-size: 16px;
   font-family: "Kumbh Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+img {
+  width: 100%;
+}
+
+.btn {
+  color: hsl(220, 13%, 13%);
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn > svg path {
+  fill: hsl(220, 13%, 13%);
+}
+
+.btn:hover {
+  background-color: hsl(25, 100%, 75%);
+}
+.overlay {
+  background-color: hsl(220, 13%, 13%);
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+  cursor: pointer;
 }
