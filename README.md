@@ -29,42 +29,53 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Frontend Mentor - E-commerce product page solution
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Overview
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### The challenge
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Users can:
 
-## Learn More
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Open a lightbox gallery by clicking on the large product image
+- Switch the large product image by clicking on the small thumbnail images
+- Add items to the cart
+- View the cart and remove items from it
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*Пользователи имеют возможность:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Просматривать оптимальный макет сайта в зависимости от размера экрана их устройства.
+- Видеть состояние наведения для всех интерактивных элементов на странице.
+- Открывать галерею в модальном окне, щелкнув по большому изображению продукта.
+- Переключать большое изображение продукта, щелкая по маленьким изображениям-миниатюрам.
+- Добавлять товары в корзину.
+- Просматривать корзину и удалять товары из нее.
 
-### Code Splitting
+### Screenshot
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Main page [main page](screenshot.png)
+- Open cart [open cart](screenshot1.png)
+- Main page width - 768px [main page width - 768px](screenshot2.png)
+- Main page width - 375px [main page width - 375px](screenshot3.png)
+- Mobile menu [mobile menu](screenshot4.png)
 
-### Analyzing the Bundle Size
+### Links
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Solution URL: [Add solution URL here](https://github.com/IuliiaSelivanova/e-commerce-product-page.git)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-### Making a Progressive Web App
+### Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- [React](https://reactjs.org/) - JS library
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Github - [IuliiaSelivanova](https://github.com/IuliiaSelivanova/)
+- Frontend Mentor - [@IuliiaSelivanova](https://www.frontendmentor.io/profile/IuliiaSelivanova)
