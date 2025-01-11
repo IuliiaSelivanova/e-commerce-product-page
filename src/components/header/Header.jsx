@@ -21,11 +21,17 @@ const Header = (props) => {
         <div className="header__wrapper">
           <div className="header__cart" onClick={() => {setIsOpenCart(!isOpenCart)}}>
             <img src={IMAGES.iconCart} alt="icon cart" />
-            {(props.isAddedToCart && props.count > 0) && 
-              (<span className='count-badge'>{props.isAddedToCart && props.count}</span>)}
+            {(props.isAddedToCart && props.value > 0 && !props.isDeleted) && 
+              (<span className='count-badge'>{props.isAddedToCart && props.value}</span>)}
           </div>
           {isOpenCart &&
-            (<Cart price={props.price} count={props.count} openCart={openCart}/>)
+            (<Cart 
+              price={props.price} 
+              count={props.value} 
+              openCart={openCart}
+              handleDelete={props.handleDelete}
+              isDeleted={props.isDeleted}
+            />)
           }
       
           <div className="profile">

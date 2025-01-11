@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
 import './cart.css';
 import CartItem from '../cartItem/CartItem';
 
-const Cart = ({price, count, openCart}) => {
-  const [isDeleted, setIsDeleted] = useState(false);
-  const handleDelete = () => {
-    setIsDeleted(!isDeleted);
-  }
+const Cart = ({price, count, openCart, isDeleted, handleDelete}) => {
+
   return (
     <>
       <div className="overlay" onClick={openCart}></div>

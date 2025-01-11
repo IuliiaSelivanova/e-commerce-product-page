@@ -5,34 +5,47 @@ import Card from "./components/card/Card";
 function App() {
   const price = 125.00;
   const [count, setCount] = useState(0);
+  const [value, setValue] = useState(0);
   const [isAddedToCart, setIsAddedToCart] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   const handleIncrement = () => {
+    setIsDeleted(false);
     setCount(count + 1);
   }
   const handleDecrement = () => {
+    setIsDeleted(false);
     setCount(count - 1);
   }
-  const formatCount = () => {
-    return count < 0 ? setCount(0) : count;
-  }
+
   const addToCart = () => {
     setIsAddedToCart(true);
+    setIsDeleted(false);
+    setValue(count);
+  }
+
+  const handleDelete = () => {
+    setIsDeleted(!isDeleted);
+    setCount(0);
+    setValue(0);
   }
 
   return (
     <div className="app">
       <Header 
         price={price} 
-        count={count}
+        value={value}
         isAddedToCart={isAddedToCart}
+        handleDelete={handleDelete}
+        isDeleted={isDeleted}
       />
       <Card 
-        value={formatCount} 
-        newprice={price} 
+        count={count} 
+        newprice={price}
         onIncrement={handleIncrement} 
         onDecrement={handleDecrement}
         addToCart={addToCart}
+        isDeleted={isDeleted}
       />
     </div>
   );

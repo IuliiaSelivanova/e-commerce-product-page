@@ -39,7 +39,7 @@ const Card = (props) => {
               <div className="icon__wrapper" onClick={handleDecrement}>
                 <img src={IMAGES.iconMinus} alt="minus" />
               </div>
-              <div className='card__counter-input'>{props.value()}</div>
+              <div className='card__counter-input'>{props.isDeleted ? 0 : props.count}</div>
               <div className="icon__wrapper" onClick={handleIncrement}>
                 <img src={IMAGES.iconPlus} alt="plus" />
               </div>
